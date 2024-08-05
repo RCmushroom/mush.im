@@ -2,10 +2,23 @@
   "name": "mush.im",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prod": "node src/app.mjs",
+    "dev": "nodemon src/app.mjs"
   },
   "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "express": "^4.19.2",
+    "node-html-parser": "^6.1.13"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "*"
+    ],
+    "ignore": [
+      "./src/public"
+    ],
+    "ext": "js,mjs,json,html,css"
+  }
 }
