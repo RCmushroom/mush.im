@@ -20,7 +20,7 @@ jobs:
     runs-on:
       labels: [self-hosted, sangsu]
     steps:
-      - uses: actions/cache@v3
+      - uses: actions/cache@master
         with:
           path: node_modules
           key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
@@ -35,4 +35,5 @@ jobs:
     runs-on:
       labels: [self-hosted, sangsu]
     steps:
+      - run: chmod 777 ./start.sh
       - run: ./start.sh
