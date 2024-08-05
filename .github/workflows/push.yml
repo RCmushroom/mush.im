@@ -34,4 +34,4 @@ jobs:
       labels: [self-hosted, sangsu]
     steps:
       - run: chmod 777 ./start.sh
-      - run: ./start.sh
+      - run: RUNNER_TRACKING_ID="" && ./start.sh
