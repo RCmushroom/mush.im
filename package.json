@@ -1,0 +1,24 @@
+{
+  "name": "mush.im",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.mjs",
+  "scripts": {
+    "prod": "node src/app.mjs",
+    "dev": "nodemon src/app.mjs"
+  },
+  "author": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "node-html-parser": "^6.1.13"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "*"
+    ],
+    "ignore": [
+      "./src/public"
+    ],
+    "ext": "js,mjs,json,html,css"
+  }
+}
