@@ -4,8 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link href="./index.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
-    sans what
+    <div class="header">
+      <div class="header-menu">
+        <div class="asdf">메뉴</div>
+      </div>
+      <div class="header-logo">
+        <div class="asdf">로고</div>
+      </div>
+      <div class="header-my">
+        <div class="asdf">나의 계정</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="main_block block">
+        <div class="main_box box">
+          <div class="main_title">
+            <div class="main_title_text inner">메인타이틀</div>
+          </div>
+          <div class="main_menu">
+            <div class="main_menu_text inner">메인 메뉴</div>
+          </div>
+          <div class="main_scroll">
+            <span class="main_scroll_year"></span>
+            <span class="main_scroll_hour"></span> :
+            <span class="main_scroll_minute"></span> :
+            <span class="main_scroll_second"></span>
+            <script>
+              let hour_el = document.querySelector(".main_scroll_hour");
+              let minute_el = document.querySelector(".main_scroll_minute");
+              let second_el = document.querySelector(".main_scroll_second");
+              main_scroll_time_modify();
+
+              setInterval(function () {
+                main_scroll_time_modify();
+              });
+
+              function main_scroll_time_modify() {
+                let main_scroll_time = new Date();
+                let main_scroll_year = main_scroll_time.getFullYear();
+                let main_scroll_month = main_scroll_time.getMonth();
+                let main_scroll_day = main_scroll_time.getDay();
+                let main_scroll_hour = main_scroll_time.getHours();
+                let main_scroll_minute = main_scroll_time.getMinutes();
+                let main_scroll_second = main_scroll_time.getSeconds();
+
+                hour_el.innerText = main_scroll_hour;
+                minute_el.innerText = main_scroll_minute;
+                second_el.innerText = main_scroll_second;
+              }
+            </script>
+          </div>
+          <div class="main_image_wrapper">
+            <div class="main_image_content">
+              <img
+                class="main_image"
+                src="./image/main_image.jpg"
+                alt="메인 이미지"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block_1 block">
+        <div class="box_1 box"></div>
+      </div>
+      <div class="block_2 block">
+        <div class="box_2 box"></div>
+      </div>
+      <div class="block_3 block">
+        <div class="box_3 box"></div>
+      </div>
+    </div>
+    <div class="footer"></div>
   </body>
 </html>
